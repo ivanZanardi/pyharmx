@@ -31,7 +31,7 @@ pytest <path-to-pyharmx>
 
 ## Explore
 
-Check out the [examples](https://github.com/ivanZanardi/pyharmx/tree/main/examples) provided in the repository to see PyHarmX in action. Please see the [documentation](https://pyharmxspline.readthedocs.io/en/latest/index.html) website for a detailed user guide.
+Check out the [examples](https://github.com/ivanZanardi/pyharmx/tree/main/examples) provided in the repository to see PyHarmX in action. Please see the [documentation](https://pyharmx.readthedocs.io/en/latest/index.html) website for a detailed user guide.
 
 ## License
 
