@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>pyharmx package &mdash; PyHarmX 0.0.1 documentation</title>
+  <title>pyharmx.interpolator module &mdash; PyHarmX 0.0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
 
@@ -50,32 +50,18 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">API</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">pyharmx package</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#module-pyharmx.functions">pyharmx.functions module</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#pyharmx.functions.cross_squared_distance_matrix"><code class="docutils literal notranslate"><span class="pre">cross_squared_distance_matrix()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#pyharmx.functions.get_phi"><code class="docutils literal notranslate"><span class="pre">get_phi()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#pyharmx.functions.pairwise_squared_distance_matrix"><code class="docutils literal notranslate"><span class="pre">pairwise_squared_distance_matrix()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#module-pyharmx.interpolator">pyharmx.interpolator module</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#pyharmx.interpolator.PolyHarmInterpolator"><code class="docutils literal notranslate"><span class="pre">PolyHarmInterpolator</span></code></a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#pyharmx.interpolator.PolyHarmInterpolator.build"><code class="docutils literal notranslate"><span class="pre">PolyHarmInterpolator.build()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#pyharmx.interpolator.PolyHarmInterpolator.forward"><code class="docutils literal notranslate"><span class="pre">PolyHarmInterpolator.forward()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#pyharmx.interpolator.PolyHarmInterpolator.training"><code class="docutils literal notranslate"><span class="pre">PolyHarmInterpolator.training</span></code></a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">pyharmx.interpolator module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#pyharmx.interpolator.PolyHarmInterpolator"><code class="docutils literal notranslate"><span class="pre">PolyHarmInterpolator</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pyharmx.interpolator.PolyHarmInterpolator.build"><code class="docutils literal notranslate"><span class="pre">PolyHarmInterpolator.build()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyharmx.interpolator.PolyHarmInterpolator.forward"><code class="docutils literal notranslate"><span class="pre">PolyHarmInterpolator.forward()</span></code></a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#module-pyharmx">Module contents</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#pyharmx.PolyHarmInterpolator"><code class="docutils literal notranslate"><span class="pre">PolyHarmInterpolator</span></code></a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#pyharmx.PolyHarmInterpolator.build"><code class="docutils literal notranslate"><span class="pre">PolyHarmInterpolator.build()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#pyharmx.PolyHarmInterpolator.forward"><code class="docutils literal notranslate"><span class="pre">PolyHarmInterpolator.forward()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#pyharmx.PolyHarmInterpolator.training"><code class="docutils literal notranslate"><span class="pre">PolyHarmInterpolator.training</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="#module-pyharmx.functions">pyharmx.functions module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#pyharmx.functions.cross_squared_distance_matrix"><code class="docutils literal notranslate"><span class="pre">cross_squared_distance_matrix()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pyharmx.functions.get_phi"><code class="docutils literal notranslate"><span class="pre">get_phi()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pyharmx.functions.pairwise_squared_distance_matrix"><code class="docutils literal notranslate"><span class="pre">pairwise_squared_distance_matrix()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -94,7 +80,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">pyharmx package</li>
+      <li class="breadcrumb-item active">pyharmx.interpolator module</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/pyharmx.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -104,85 +90,12 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="pyharmx-package">
-<h1>pyharmx package<a class="headerlink" href="#pyharmx-package" title="Permalink to this heading"></a></h1>
-<section id="submodules">
-<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading"></a></h2>
-</section>
-<section id="module-pyharmx.functions">
-<span id="pyharmx-functions-module"></span><h2>pyharmx.functions module<a class="headerlink" href="#module-pyharmx.functions" title="Permalink to this heading"></a></h2>
-<dl class="py function">
-<dt class="sig sig-object py" id="pyharmx.functions.cross_squared_distance_matrix">
-<span class="sig-name descname"><span class="pre">cross_squared_distance_matrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Tensor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Tensor</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tensor</span></span></span><a class="reference internal" href="_modules/pyharmx/functions.html#cross_squared_distance_matrix"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyharmx.functions.cross_squared_distance_matrix" title="Permalink to this definition"></a></dt>
-<dd><p>Pairwise squared distance between two (batch)
-matrices’ rows (2nd dimension). Computes the
-pairwise distances between rows of <cite>x</cite> and rows of <cite>y</cite>.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>x</strong> (<em>torch.Tensor</em>) – 3D tensor with shape <cite>[batch_size, n, d]</cite>.</p></li>
-<li><p><strong>y</strong> (<em>torch.Tensor</em>) – 3D tensor with shape <cite>[batch_size, m, d]</cite>.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>3D tensor with shape <cite>[batch_size, n, m]</cite>. Each
-element represents the squared Euclidean distance
-between vectors <cite>x[b, i, :]</cite> and <cite>y[b, j, :]</cite>.</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>torch.Tensor</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="pyharmx.functions.get_phi">
-<span class="sig-name descname"><span class="pre">get_phi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">order</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">callable</span></span></span><a class="reference internal" href="_modules/pyharmx/functions.html#get_phi"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyharmx.functions.get_phi" title="Permalink to this definition"></a></dt>
-<dd><p>Coordinate-wise nonlinear function used to
-define the order of the interpolation. See
-<a class="reference external" href="https://en.wikipedia.org/wiki/Polyharmonic_spline">here</a>
-for the definition.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>order</strong> (<em>int</em>) – Interpolation order.</p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Coordinate-wise nonlinear kernel <span class="math notranslate nohighlight">\({\phi}\)</span>.</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>callable</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="pyharmx.functions.pairwise_squared_distance_matrix">
-<span class="sig-name descname"><span class="pre">pairwise_squared_distance_matrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Tensor</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tensor</span></span></span><a class="reference internal" href="_modules/pyharmx/functions.html#pairwise_squared_distance_matrix"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyharmx.functions.pairwise_squared_distance_matrix" title="Permalink to this definition"></a></dt>
-<dd><p>Compute pairwise squared distance among a (batch) matrix’s
-rows (2nd dimension). It is faster than <cite>cross_squared_distance_matrix</cite>.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>x</strong> (<em>torch.Tensor</em>) – 3D tensor with shape <cite>[batch_size, n, d]</cite>.</p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>3D tensor with shape <cite>[batch_size, n, n]</cite>. Each
-element represents the squared Euclidean distance
-between vectors <cite>x[b, i, :]</cite> and <cite>x[b, j, :]</cite>.</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>torch.Tensor</p>
-</dd>
-</dl>
-</dd></dl>
-
-</section>
-<section id="module-pyharmx.interpolator">
-<span id="pyharmx-interpolator-module"></span><h2>pyharmx.interpolator module<a class="headerlink" href="#module-pyharmx.interpolator" title="Permalink to this heading"></a></h2>
+  <section id="module-pyharmx.interpolator">
+<span id="pyharmx-interpolator-module"></span><h1>pyharmx.interpolator module<a class="headerlink" href="#module-pyharmx.interpolator" title="Permalink to this heading"></a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyharmx.interpolator.PolyHarmInterpolator">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PolyHarmInterpolator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">c</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Tensor</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Tensor</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">order</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">smoothing</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'cpu'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dtype</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">torch.float32</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyharmx/interpolator.html#PolyHarmInterpolator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyharmx.interpolator.PolyHarmInterpolator" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code></p>
-<p>Interpolate batched data using polyharmonic interpolation.</p>
+<dd><p>Interpolate batched data using polyharmonic interpolation.</p>
 <p>The interpolant has the form:</p>
 <p><span class="math notranslate nohighlight">\({f(x) = \sum_{i = 1}^n w_i \phi(||x - c_i||) + v^\text{T}x + b}\)</span>.</p>
 <p>This is a sum of two terms: (1) A weighted sum of radial basis function
@@ -257,103 +170,75 @@ to evaluate the interpolation at.</p>
 </dl>
 </dd></dl>
 
-<dl class="py attribute">
-<dt class="sig sig-object py" id="pyharmx.interpolator.PolyHarmInterpolator.training">
-<span class="sig-name descname"><span class="pre">training</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#pyharmx.interpolator.PolyHarmInterpolator.training" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
 </dd></dl>
 
 </section>
-<section id="module-pyharmx">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-pyharmx" title="Permalink to this heading"></a></h2>
-<dl class="py class">
-<dt class="sig sig-object py" id="pyharmx.PolyHarmInterpolator">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PolyHarmInterpolator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">c</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Tensor</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Tensor</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">order</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">smoothing</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'cpu'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dtype</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">torch.float32</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyharmx/interpolator.html#PolyHarmInterpolator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyharmx.PolyHarmInterpolator" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code></p>
-<p>Interpolate batched data using polyharmonic interpolation.</p>
-<p>The interpolant has the form:</p>
-<p><span class="math notranslate nohighlight">\({f(x) = \sum_{i = 1}^n w_i \phi(||x - c_i||) + v^\text{T}x + b}\)</span>.</p>
-<p>This is a sum of two terms: (1) A weighted sum of radial basis function
-(RBF) terms with centers <span class="math notranslate nohighlight">\({\left(c_1, \ldots, c_n\right)}\)</span>. (2) A
-linear term with a bias. The <span class="math notranslate nohighlight">\({c_i}\)</span> vectors are ‘training’ points.
-The coefficients <span class="math notranslate nohighlight">\({w}\)</span> and <span class="math notranslate nohighlight">\({v}\)</span> are estimated such that the
-interpolant exactly fits the value of the function at the <span class="math notranslate nohighlight">\({c_i}\)</span>
-points, and the vector <span class="math notranslate nohighlight">\({w}\)</span> is orthogonal to each <span class="math notranslate nohighlight">\({c_i}\)</span>,
-and the vector <span class="math notranslate nohighlight">\({w}\)</span> sums to 0. With these constraints, the
-coefficients can be obtained by solving a linear system.</p>
-<p>The function <span class="math notranslate nohighlight">\({\phi}\)</span> is an RBF, parametrized by an interpolation
-order. Using <cite>order=2</cite> produces the well-known thin-plate spline.</p>
-<p>We also provide the option to perform regularized interpolation. Here, the
-interpolant is selected to trade off between the squared loss on the
-training data and a certain measure of its curvature
-[<a class="reference external" href="https://en.wikipedia.org/wiki/Polyharmonic_spline">details</a>].
-Using a regularization weight greater than zero has the effect that the
-interpolant will no longer exactly fit the training data. However, it may be
-less vulnerable to overfitting, particularly for high-order interpolation.</p>
+<section id="module-pyharmx.functions">
+<span id="pyharmx-functions-module"></span><h1>pyharmx.functions module<a class="headerlink" href="#module-pyharmx.functions" title="Permalink to this heading"></a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="pyharmx.functions.cross_squared_distance_matrix">
+<span class="sig-name descname"><span class="pre">cross_squared_distance_matrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Tensor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Tensor</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tensor</span></span></span><a class="reference internal" href="_modules/pyharmx/functions.html#cross_squared_distance_matrix"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyharmx.functions.cross_squared_distance_matrix" title="Permalink to this definition"></a></dt>
+<dd><p>Pairwise squared distance between two (batch)
+matrices’ rows (2nd dimension). Computes the
+pairwise distances between rows of <cite>x</cite> and rows of <cite>y</cite>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>c</strong> (<em>torch.Tensor</em><em> or </em><em>np.ndarray</em>) – 3D tensor with shape <cite>[batch_size, n, d]</cite> of <cite>n</cite> <cite>d</cite>-dimensional
-locations. These do not need to be regularly-spaced.</p></li>
-<li><p><strong>f</strong> (<em>torch.Tensor</em><em> or </em><em>np.ndarray</em>) – 3D tensor with shape <cite>[batch_size, n, k]</cite> of <cite>n</cite> <cite>c</cite>-dimensional
-values evaluated at train_points.</p></li>
-<li><p><strong>order</strong> (<em>int</em>) – (optional) Order of the interpolation. Common values are
-1 for <span class="math notranslate nohighlight">\({\phi(r)=r}\)</span>, 2 for <span class="math notranslate nohighlight">\({\phi(r)=r^2 \log(r)}\)</span>
-(thin-plate spline), or 3 for <span class="math notranslate nohighlight">\({\phi(r)=r^3}\)</span>.</p></li>
-<li><p><strong>smoothing</strong> (<em>float</em>) – (optional) Weight placed on the regularization term.
-This will depend substantially on the problem, and
-it should always be tuned. For many problems, it is
-reasonable to use no regularization. If using a non-zero
-value, we recommend a small value like 0.001.</p></li>
-<li><p><strong>device</strong> (<em>str</em>) – (optional) Specifies the default device to store tensors
-and perform interpolation.</p></li>
-<li><p><strong>dtype</strong> (<em>torch.dtype</em>) – (optional) Specifies the default precision.</p></li>
+<li><p><strong>x</strong> (<em>torch.Tensor</em>) – 3D tensor with shape <cite>[batch_size, n, d]</cite>.</p></li>
+<li><p><strong>y</strong> (<em>torch.Tensor</em>) – 3D tensor with shape <cite>[batch_size, m, d]</cite>.</p></li>
 </ul>
 </dd>
-</dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="pyharmx.PolyHarmInterpolator.build">
-<span class="sig-name descname"><span class="pre">build</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/pyharmx/interpolator.html#PolyHarmInterpolator.build"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyharmx.PolyHarmInterpolator.build" title="Permalink to this definition"></a></dt>
-<dd><p>Solve for interpolation coefficients.</p>
-<p>Computes the coefficients <span class="math notranslate nohighlight">\({w}\)</span> and <span class="math notranslate nohighlight">\({v}\)</span> of the
-polyharmonic interpolant for the training data defined by
-<span class="math notranslate nohighlight">\({\left(c, f\right)}\)</span> using the kernel <span class="math notranslate nohighlight">\({\phi}\)</span>.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pyharmx.PolyHarmInterpolator.forward">
-<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Tensor</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">ndarray</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tensor</span></span></span><a class="reference internal" href="_modules/pyharmx/interpolator.html#PolyHarmInterpolator.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyharmx.PolyHarmInterpolator.forward" title="Permalink to this definition"></a></dt>
-<dd><p>Apply polyharmonic interpolation model to new input data.</p>
-<p>Given coefficients <span class="math notranslate nohighlight">\({w}\)</span> and <span class="math notranslate nohighlight">\({v}\)</span> for the interpolation
-model, the interpolated function is evaluated at query points <span class="math notranslate nohighlight">\({x}\)</span>.</p>
-<p>Note that the interpolation procedure is differentiable with respect
-to <span class="math notranslate nohighlight">\({x}\)</span>.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>x</strong> (<em>torch.Tensor</em>) – 3D tensor with shape <cite>[batch_size, m, d]</cite>
-to evaluate the interpolation at.</p>
-</dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Polyharmonic interpolation evaluated at query points <cite>x</cite>.</p>
+<dd class="field-even"><p>3D tensor with shape <cite>[batch_size, n, m]</cite>. Each
+element represents the squared Euclidean distance
+between vectors <cite>x[b, i, :]</cite> and <cite>y[b, j, :]</cite>.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>torch.Tensor</p>
 </dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
-<dd class="field-even"><p><strong>ValueError</strong> – If the input tensor <cite>x</cite> is not 3-dimensional.</p>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyharmx.functions.get_phi">
+<span class="sig-name descname"><span class="pre">get_phi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">order</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">callable</span></span></span><a class="reference internal" href="_modules/pyharmx/functions.html#get_phi"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyharmx.functions.get_phi" title="Permalink to this definition"></a></dt>
+<dd><p>Coordinate-wise nonlinear function used to
+define the order of the interpolation. See
+<a class="reference external" href="https://en.wikipedia.org/wiki/Polyharmonic_spline">here</a>
+for the definition.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>order</strong> (<em>int</em>) – Interpolation order.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Coordinate-wise nonlinear kernel <span class="math notranslate nohighlight">\({\phi}\)</span>.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>callable</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="py attribute">
-<dt class="sig sig-object py" id="pyharmx.PolyHarmInterpolator.training">
-<span class="sig-name descname"><span class="pre">training</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#pyharmx.PolyHarmInterpolator.training" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
+<dl class="py function">
+<dt class="sig sig-object py" id="pyharmx.functions.pairwise_squared_distance_matrix">
+<span class="sig-name descname"><span class="pre">pairwise_squared_distance_matrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Tensor</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tensor</span></span></span><a class="reference internal" href="_modules/pyharmx/functions.html#pairwise_squared_distance_matrix"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyharmx.functions.pairwise_squared_distance_matrix" title="Permalink to this definition"></a></dt>
+<dd><p>Compute pairwise squared distance among a (batch) matrix’s
+rows (2nd dimension). It is faster than <cite>cross_squared_distance_matrix</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>x</strong> (<em>torch.Tensor</em>) – 3D tensor with shape <cite>[batch_size, n, d]</cite>.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>3D tensor with shape <cite>[batch_size, n, n]</cite>. Each
+element represents the squared Euclidean distance
+between vectors <cite>x[b, i, :]</cite> and <cite>x[b, j, :]</cite>.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>torch.Tensor</p>
+</dd>
+</dl>
 </dd></dl>
 
-</section>
 </section>
 
 
