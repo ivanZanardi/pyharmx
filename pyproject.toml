@@ -8,7 +8,7 @@ version = "0.0.1"
 dynamic = ["dependencies"]
 description = "Polyharmonic spline interpolation in PyTorch"
 readme = "README.md"
-license = {text = "MIT"}
+license = {text = "NCSA Open Source License"}
 authors = [
     {name = "Ivan Zanardi", email = "ivan.zanardi.us@gmail.com"}
 ]
