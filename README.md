@@ -3,7 +3,6 @@
 **Polyharmonic spline interpolation in PyTorch**
 
 ---
-[![Build Status](https://github.com/lululxvi/pyharmx/actions/workflows/build.yml/badge.svg)](https://github.com/lululxvi/pyharmx/actions/workflows/build.yml)
 [![Documentation Status](https://readthedocs.org/projects/pyharmx/badge/?version=latest)](https://pyharmx.readthedocs.io/en/latest/?badge=latest)
 [![PyPI Version](https://badge.fury.io/py/PyHarmX.svg)](https://badge.fury.io/py/PyHarmX)
 [![PyPI Downloads](https://static.pepy.tech/badge/pyharmx)](https://www.pepy.tech/projects/pyharmx)
