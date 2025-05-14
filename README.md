@@ -3,10 +3,10 @@
 **Polyharmonic spline interpolation in PyTorch**
 
 ---
-[![Build Status](https://github.com/lululxvi/deepxde/actions/workflows/build.yml/badge.svg)](https://github.com/lululxvi/deepxde/actions/workflows/build.yml)
+[![Build Status](https://github.com/lululxvi/pyharmx/actions/workflows/build.yml/badge.svg)](https://github.com/lululxvi/pyharmx/actions/workflows/build.yml)
 [![Documentation Status](https://readthedocs.org/projects/pyharmx/badge/?version=latest)](https://pyharmx.readthedocs.io/en/latest/?badge=latest)
-[![PyPI Version](https://badge.fury.io/py/DeepXDE.svg)](https://badge.fury.io/py/DeepXDE)
-[![PyPI Downloads](https://static.pepy.tech/badge/deepxde)](https://www.pepy.tech/projects/deepxde)
+[![PyPI Version](https://badge.fury.io/py/PyHarmX.svg)](https://badge.fury.io/py/PyHarmX)
+[![PyPI Downloads](https://static.pepy.tech/badge/pyharmx)](https://www.pepy.tech/projects/pyharmx)
 
 PyHarmX is a PyTorch module designed for efficient [polyharmonic spline interpolation](https://en.wikipedia.org/wiki/Polyharmonic_spline). Leveraging GPU acceleration, this implementation excels in performance, making it well-suited for large-scale interpolation tasks.
 
