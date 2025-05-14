@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pyharmx"
-version = "0.0.1"
+version = "0.1.1"
 dynamic = ["dependencies"]
 description = "Polyharmonic spline interpolation in PyTorch"
 readme = "README.md"
