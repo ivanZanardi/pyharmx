@@ -1,9 +1,9 @@
 import importlib.metadata
 
 __author__ = "Ivan Zanardi"
-__email__ = "ivan.zanardi.us@gmail.com"
+__email__ = "zanardi3@illinois.edu"
 __url__ = "https://github.com/ivanZanardi/pyharmx"
-__license__ = "NCSA Open Source License"
+__license__ = "MIT"
 __version__ = importlib.metadata.version("pyharmx")
 __all__ = ["PolyHarmInterpolator"]
 

@@ -29,4 +29,4 @@ Check out the `examples <https://github.com/ivanZanardi/pyharmx/tree/main/exampl
 License
 ============
 
-PyHarmX is distributed under the `NCSA Open Source License <https://github.com/ivanZanardi/pyharmx/blob/main/LICENSE>`_. Feel free to use, modify, and contribute to this project within the terms of the license.
+PyHarmX is distributed under the `MIT License <https://github.com/ivanZanardi/pyharmx/blob/main/LICENSE>`_. Feel free to use, modify, and contribute to this project within the terms of the license.
