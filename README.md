@@ -41,15 +41,15 @@ Check out the [examples](https://github.com/ivanZanardi/pyharmx/tree/main/exampl
 If you find this package useful, please cite:
 
 ```bibtex
-@software{ivan_zanardi_2025_15571515,
+@software{ivan_zanardi_2025_pyharmx,
   author       = {Ivan Zanardi},
   title        = {PyHarmX},
   month        = {06},
   year         = {2025},
   publisher    = {Zenodo},
-  version      = {v0.1.1},
-  doi          = {10.5281/zenodo.15604054},
-  url          = {https://doi.org/10.5281/zenodo.15604054}
+  version      = {v0.1.4},
+  doi          = {10.5281/zenodo.15643888},
+  url          = {https://doi.org/10.5281/zenodo.15643888}
 }
 ```
 
