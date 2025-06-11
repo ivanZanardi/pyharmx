@@ -47,9 +47,9 @@ If you find this package useful, please cite:
   month        = {06},
   year         = {2025},
   publisher    = {Zenodo},
-  version      = {v0.1.4},
-  doi          = {10.5281/zenodo.15643888},
-  url          = {https://doi.org/10.5281/zenodo.15643888}
+  version      = {v0.1.5},
+  doi          = {10.5281/zenodo.15643936},
+  url          = {https://doi.org/10.5281/zenodo.15643936}
 }
 ```
 
