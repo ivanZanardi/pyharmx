@@ -34,11 +34,11 @@ pytest <path-to-pyharmx>
 
 ## Explore
 
-Check out the [examples](https://github.com/ivanZanardi/pyharmx/tree/main/examples) provided in the repository to see PyHarmX in action. Please see the [documentation](https://pyharmx.readthedocs.io/en/latest/index.html) website for a detailed user guide.  ```
+Check out the [examples](https://github.com/ivanZanardi/pyharmx/tree/main/examples) provided in the repository to see PyHarmX in action. Please see the [documentation](https://pyharmx.readthedocs.io/en/latest/index.html) website for a detailed user guide.
 
 ## Citation
 
-If you use this Python package, please cite us:
+If you find this package useful, please cite:
 
 ```bibtex
 @software{ivan_zanardi_2025_15571515,
