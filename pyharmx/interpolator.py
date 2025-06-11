@@ -13,16 +13,16 @@ class PolyHarmInterpolator(torch.nn.Module):
 
   :math:`{f(x) = \sum_{i = 1}^n w_i \phi(||x - c_i||) + v^\text{T}x + b}`.
 
-  This is a sum of two terms: (1) A weighted sum of radial basis function 
-  (RBF) terms with centers :math:`{\left(c_1, \ldots, c_n\right)}`. (2) A 
-  linear term with a bias. The :math:`{c_i}` vectors are 'training' points. 
-  The coefficients :math:`{w}` and :math:`{v}` are estimated such that the 
-  interpolant exactly fits the value of the function at the :math:`{c_i}` 
-  points, and the vector :math:`{w}` is orthogonal to each :math:`{c_i}`, 
-  and the vector :math:`{w}` sums to 0. With these constraints, the 
+  This is a sum of two terms: (1) A weighted sum of radial basis function
+  (RBF) terms with centers :math:`{\left(c_1, \ldots, c_n\right)}`. (2) A
+  linear term with a bias. The :math:`{c_i}` vectors are 'training' points.
+  The coefficients :math:`{w}` and :math:`{v}` are estimated such that the
+  interpolant exactly fits the value of the function at the :math:`{c_i}`
+  points, and the vector :math:`{w}` is orthogonal to each :math:`{c_i}`,
+  and the vector :math:`{w}` sums to 0. With these constraints, the
   coefficients can be obtained by solving a linear system.
 
-  The function :math:`{\phi}` is an RBF, parametrized by an interpolation 
+  The function :math:`{\phi}` is an RBF, parametrized by an interpolation
   order. Using `order=2` produces the well-known thin-plate spline.
 
   We also provide the option to perform regularized interpolation. Here, the
@@ -67,7 +67,6 @@ class PolyHarmInterpolator(torch.nn.Module):
     **kwargs
   ) -> None:
     super(PolyHarmInterpolator, self).__init__(*args, **kwargs)
-    self._built = False
     # Set dtype and device
     self.dtype = dtype
     self.device = device
@@ -79,9 +78,9 @@ class PolyHarmInterpolator(torch.nn.Module):
     for (k, x) in (('c',c), ('f',f)):
       if isinstance(x, np.ndarray):
         x = torch.from_numpy(x)
-      x = x.to(**self.malloc_kwargs)
       if (x.ndim != 3):
         raise ValueError(f"'{k}' must be a 3-dimensional tensor.")
+      x = x.to(**self.malloc_kwargs)
       self.register_buffer(k, x)
     if (self.c.shape[:2] != self.f.shape[:2]):
       raise ValueError(
@@ -91,51 +90,16 @@ class PolyHarmInterpolator(torch.nn.Module):
     self.smoothing = float(smoothing)
     self.order = int(order)
     self.phi = get_phi(self.order)
-
-  def forward(self, x: Union[torch.Tensor, np.ndarray]) -> torch.Tensor:
-    r"""
-    Apply polyharmonic interpolation model to new input data.
-
-    Given coefficients :math:`{w}` and :math:`{v}` for the interpolation 
-    model, the interpolated function is evaluated at query points :math:`{x}`.
-
-    Note that the interpolation procedure is differentiable with respect 
-    to :math:`{x}`.
-
-    :param x: 3D tensor with shape `[batch_size, m, d]`
-              to evaluate the interpolation at.
-    :type x: torch.Tensor
-
-    :return: Polyharmonic interpolation evaluated at query points `x`.
-    :rtype: torch.Tensor
-
-    :raises ValueError: If the input tensor `x` is not 3-dimensional.
-    """
-    if (not self._built):
-      # Fit the interpolant to the observed data
-      self.build()
-    if (x.ndim != 3):
-      raise ValueError("'x' must be a 3-dimensional tensor.")
-    if isinstance(x, np.ndarray):
-      x = torch.from_numpy(x).to(**self.malloc_kwargs)
-    if (x.device != self.device):
-      x = x.to(**self.malloc_kwargs)
-    # Compute the contribution from the rbf term
-    d = cross_squared_distance_matrix(x, self.c)
-    d_phi = self.phi(d)
-    rbf_term = torch.matmul(d_phi, self.w)
-    # Compute the contribution from the linear term
-    ones = torch.ones_like(x[..., :1], **self.malloc_kwargs)
-    x_pad = torch.concat([x, ones], dim=2)
-    linear_term = torch.matmul(x_pad, self.v)
-    return rbf_term + linear_term
+    # Fit the interpolant to the observed data
+    self._built = False
+    self.build()
 
   def build(self) -> None:
     r"""
     Solve for interpolation coefficients.
 
-    Computes the coefficients :math:`{w}` and :math:`{v}` of the 
-    polyharmonic interpolant for the training data defined by 
+    Computes the coefficients :math:`{w}` and :math:`{v}` of the
+    polyharmonic interpolant for the training data defined by
     :math:`{\left(c, f\right)}` using the kernel :math:`{\phi}`.
     """
     # Get dimensions
@@ -165,3 +129,43 @@ class PolyHarmInterpolator(torch.nn.Module):
     self.register_buffer("w", w)
     self.register_buffer("v", v)
     self._built = True
+
+  def forward(
+    self,
+    x: Union[torch.Tensor, np.ndarray]
+  ) -> torch.Tensor:
+    r"""
+    Apply polyharmonic interpolation model to new input data.
+
+    Given coefficients :math:`{w}` and :math:`{v}` for the interpolation
+    model, the interpolated function is evaluated at query points :math:`{x}`.
+
+    Note that the interpolation procedure is differentiable with respect
+    to :math:`{x}`.
+
+    :param x: 3D tensor with shape `[batch_size, m, d]`
+              to evaluate the interpolation at.
+    :type x: torch.Tensor
+
+    :return: Polyharmonic interpolation evaluated at query points `x`.
+    :rtype: torch.Tensor
+
+    :raises ValueError: If the input tensor `x` is not 3-dimensional.
+    """
+    if (not self._built):
+      raise ValueError("The interpolator has not been built.")
+    if (x.ndim != 3):
+      raise ValueError("'x' must be a 3-dimensional tensor.")
+    if isinstance(x, np.ndarray):
+      x = torch.from_numpy(x).to(**self.malloc_kwargs)
+    if (x.device != self.device):
+      x = x.to(**self.malloc_kwargs)
+    # Compute the contribution from the rbf term
+    d = cross_squared_distance_matrix(x, self.c)
+    d_phi = self.phi(d)
+    rbf_term = torch.matmul(d_phi, self.w)
+    # Compute the contribution from the linear term
+    ones = torch.ones_like(x[..., :1], **self.malloc_kwargs)
+    x_pad = torch.concat([x, ones], dim=2)
+    linear_term = torch.matmul(x_pad, self.v)
+    return rbf_term + linear_term

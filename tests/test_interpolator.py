@@ -11,7 +11,7 @@ class TestInterpolator(unittest.TestCase):
     # Setup common variables for tests
     self.order = 1
     self.smoothing = 0.0
-    self.device = 'cpu'
+    self.device = "cpu"
     self.dtype = torch.float
     # Create random input data
     b = 20
@@ -62,5 +62,5 @@ class TestInterpolator(unittest.TestCase):
       atol=1e-5
     )
 
-if __name__ == '__main__':
+if __name__ == "__main__":
   unittest.main()
